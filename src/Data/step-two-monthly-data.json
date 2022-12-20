@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "image":"assets/images/icon-arcade.svg",
+        "title":"Arcade",
+        "price":"$9/mo"
+    },
+    {
+        "id":2,
+        "image":"assets/images/icon-advanced.svg",
+        "title":"Advanced",
+        "price":"$12/mo"
+    },
+    {
+        "id":3,
+        "image":"assets/images/icon-pro.svg",
+        "title":"Pro",
+        "price":"$15/mo"
+    }
+]

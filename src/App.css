@@ -1,3 +1,16 @@
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url(/public/assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url(/public/assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url(/public/assets/fonts/Ubuntu-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,4 +18,182 @@
 
 .App {
   text-align: center;
+  background-color: rgb(238, 245, 255);
+  min-height: 100vh;
+  position: relative;
+}
+.container {
+  width: 100%;
+}
+img {
+  max-width: 100%;
+}
+
+/* FormStepOne */
+.form-step-one {
+  position: relative;
+}
+.bg-form-one {
+  background-image: url("/public/assets/images/bg-sidebar-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 170px;
+}
+.btn {
+  background-color: transparent;
+  border: 1px solid #eee;
+  border-radius: 100px;
+  color: #fff;
+  font-family: "Ubuntu-Bold";
+  font-size: 1rem;
+  height: 40px;
+  margin: 1.5em 1em;
+  width: 40px;
+}
+.one {
+  background-color: rgb(191, 227, 253);
+  border: none;
+  border-radius: 100px;
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Bold";
+  font-size: 1rem;
+  height: 40px;
+  margin: 1.5em 1em;
+  width: 40px;
+}
+.two {
+  background-color: rgb(191, 227, 253);
+  border: none;
+  border-radius: 100px;
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Bold";
+  font-size: 1rem;
+  height: 40px;
+  margin: 1.5em 1em;
+  width: 40px;
+}
+.three {
+  background-color: rgb(191, 227, 253);
+  border: none;
+  border-radius: 100px;
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Bold";
+  font-size: 1rem;
+  height: 40px;
+  margin: 1.5em 1em;
+  width: 40px;
+}
+.four {
+  background-color: rgb(191, 227, 253);
+  border: none;
+  border-radius: 100px;
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Bold";
+  font-size: 1rem;
+  height: 40px;
+  margin: 1.5em 1em;
+  width: 40px;
+}
+.form-step-div {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 1px 3px 5px rgb(204, 204, 204);
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  top: 57%;
+  left: 6%;
+  padding: 2em 1em;
+  text-align: left;
+}
+
+
+/* StepOne */
+.step-title {
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Bold", sans-serif;
+  padding-bottom: .6em;
+}
+.step-text {
+  color: rgb(155, 156, 160);
+  font-family: "Ubuntu-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 24px;
+  padding-bottom: 1.5em;
+}
+.form-step-one label {
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Regular";
+}
+.form-step-one input {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin: .3em 0 1.5em 0;
+  padding: 1em .5em;
+  width: 94%;
+}
+.form-step-one input::placeholder {
+  color: rgb(155, 156, 160);
+  font-family: "Ubuntu-Regular";
+  color: rgb(155, 156, 160);
+}
+
+/* StepTwo */
+.step-two-map-div {
+  border-radius: 6px;
+  display: flex;
+  border: 1px solid #eee;
+  margin: 1em 0;
+  padding: 1em 0;
+}
+.step-two-map-div > div:nth-child(1) {
+  width: 17%;
+  padding-left: 1em;
+}
+.step-two-map-title {
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Medium";
+  padding-bottom: .2em;
+}
+.step-two-map-text {
+  color: rgb(155, 156, 160);
+  font-family: "Ubuntu-Regular";
+}
+/* ButtonComponent */
+.form-buttons {
+  background-color: #fff;
+  position: absolute;
+  top: 92%;
+  padding: 1em 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.back {
+  background-color: transparent;
+  border: none;
+  color: rgb(155, 156, 160);
+  font-family: "Ubuntu-Regular";
+
+  margin-left: 2em;
+}
+.next {
+  background-color: rgb(7, 46, 101);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: "Ubuntu-Regular";
+  margin-right: 2em;
+  padding: 1em;
+}
+
+/* ThanksComponent */
+.thanks-div {
+  text-align: center;
+}
+.thanks-div img {
+  margin: 1.8em 0;
 }
