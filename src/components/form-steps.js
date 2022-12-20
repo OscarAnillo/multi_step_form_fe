@@ -4,7 +4,7 @@ import { StepThree } from "./step-three";
 import { StepFour } from "./step-four";
 import { ThanksComponent } from "./thanks-component";
 
-export const FormSteps = ({ formStep, clickNextStep }) => {
+export const FormSteps = ({ formStep, switchInfo, changeHandler }) => {
   return (
     <div className="form-step-one">
       <div className="bg-form-one">
@@ -15,8 +15,10 @@ export const FormSteps = ({ formStep, clickNextStep }) => {
       </div>
       <div className="form-step-div">
         {formStep === 0 && <StepOne />}
-        {formStep === 1 && <StepTwo />}
-        {formStep === 2 && <StepThree />}
+        {formStep === 1 && (
+          <StepTwo switchInfo={switchInfo} changeHandler={changeHandler} />
+        )}
+        {formStep === 2 && <StepThree switchInfo={switchInfo} />}
         {formStep === 3 && <StepFour />}
         {formStep === 4 && <ThanksComponent />}
       </div>

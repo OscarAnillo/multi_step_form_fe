@@ -8,6 +8,7 @@ import "./App.css";
 
 function App() {
   const [formStep, setFormStep] = useState(0);
+  const [switchInfo, setSwitchInfo] = useState(true);
 
   const clickNextStep = () => {
     setFormStep((prevState) => prevState + 1);
@@ -17,10 +18,18 @@ function App() {
     setFormStep((prevState) => prevState - 1);
   };
 
+  const changeHandler = (e) => {
+    setSwitchInfo(e.target.checked);
+  };
+
   return (
     <div className="App">
       <div className="container">
-        <FormSteps formStep={formStep} />
+        <FormSteps
+          formStep={formStep}
+          switchInfo={switchInfo}
+          changeHandler={changeHandler}
+        />
       </div>
       <ButtonComponent
         formStep={formStep}

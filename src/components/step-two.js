@@ -1,16 +1,8 @@
-import { useState } from "react";
 import CustomizedSwitches from "./Common/switch";
-import dataMonthly from "../Data/step-two-monthly-data.json";
-import dataYearly from "../Data/step-two-yearly-data.json";
+import dataMonthly from "../Data/step-two/step-two-monthly-data.json";
+import dataYearly from "../Data/step-two/step-two-yearly-data.json";
 
-export const StepTwo = () => {
-  const [switchInfo, setSwitchInfo] = useState(true);
-
-  const changeHandler = (e) => {
-    setSwitchInfo(e.target.checked);
-  };
-
-  // console.log("State: ", switchInfo);
+export const StepTwo = ({ switchInfo, changeHandler }) => {
   return (
     <div>
       <h1 className="step-title">Select your plan</h1>
