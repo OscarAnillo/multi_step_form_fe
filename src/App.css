@@ -161,6 +161,20 @@ img {
   color: rgb(155, 156, 160);
   font-family: "Ubuntu-Regular";
 }
+.step-two-map-text-free {
+  color: rgb(7, 46, 101);
+  font-family: "Ubuntu-Regular";
+  padding: .3em 0;
+}
+.switch-div {
+  background-color: rgb(248, 249, 254);
+  border-radius: 6px;
+  padding: 1em 0;
+}
+.MuiTypography-body1 {
+  color: rgb(7, 46, 101);
+}
+
 /* ButtonComponent */
 .form-buttons {
   background-color: #fff;

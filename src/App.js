@@ -11,7 +11,6 @@ function App() {
 
   const clickNextStep = () => {
     setFormStep((prevState) => prevState + 1);
-    console.log(formStep);
   };
 
   const clickBackStep = () => {
