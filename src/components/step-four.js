@@ -1,17 +1,15 @@
 export const StepFour = ({ addOnsData, planName, priceAmount }) => {
-  console.log(priceAmount);
-
-  let wut = parseInt(priceAmount.slice(1, 4));
-  function testObj(arr) {
+  let finalPlanAmount = parseInt(priceAmount.slice(1, 4));
+  function addOnsDataTotal(arr) {
     let total = 0;
 
     for (let key of arr) {
       let check = parseInt(key.value.slice(2, 4));
       total += check;
     }
-    return total;
+    return total + finalPlanAmount;
   }
-  console.log(wut);
+
   return (
     <div>
       <h1 className="step-title">Finishing up</h1>
@@ -37,11 +35,11 @@ export const StepFour = ({ addOnsData, planName, priceAmount }) => {
       </div>
       <div className="step-four-row">
         <p className="total-text">
-          Total{wut >= 90 ? " (Per year)" : " (Per month)"}
+          Total{finalPlanAmount >= 90 ? " (Per year)" : " (Per month)"}
         </p>
         <p className="total-text-amount">
-          +${testObj(addOnsData) + wut}
-          {testObj(addOnsData) + wut >= 90 ? "/yr" : "/mo"}
+          +${addOnsDataTotal(addOnsData)}
+          {addOnsDataTotal(addOnsData) + finalPlanAmount >= 90 ? "/yr" : "/mo"}
         </p>
       </div>
     </div>

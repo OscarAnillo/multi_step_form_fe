@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -8,11 +6,6 @@ import dataMonthly from "../Data/step-three/step-three-monthly-data.json";
 import dataYearly from "../Data/step-three/step-three-yearly-data.json";
 
 export const StepThree = ({ switchInfo, changeHandlerCheckbox }) => {
-  useEffect(() => {
-    let test = document.getElementById("testPrice");
-    console.log(test);
-  }, []);
-
   return (
     <div>
       <h1 className="step-title">Pick add-ons</h1>

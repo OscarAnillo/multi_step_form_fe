@@ -121,34 +121,3 @@ export const StepTwo = ({
     </div>
   );
 };
-
-/* 
-{!switchInfo
-          ? dataMonthly.map((item) => (
-              <div
-                key={item.id}
-                className="step-two-map-div"
-                onClick={clickHandler}
-              >
-                <div>
-                  <img src={item.image} alt="" />
-                </div>
-                <div>
-                  <h3 className="step-two-map-title">{item.title}</h3>
-                  <p className="step-two-map-text">{item.price}</p>
-                </div>
-              </div>
-            ))
-          : dataYearly.map((item) => (
-              <div key={item.id} className="step-two-map-div">
-                <div>
-                  <img src={item.image} alt="" />
-                </div>
-                <div>
-                  <h3 className="step-two-map-title">{item.title}</h3>
-                  <p className="step-two-map-text">{item.price}</p>
-                  <p className="step-two-map-text-free">{item.free}</p>
-                </div>
-              </div>
-            ))}
-*/
