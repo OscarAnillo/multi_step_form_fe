@@ -4,7 +4,17 @@ import { StepThree } from "./step-three";
 import { StepFour } from "./step-four";
 import { ThanksComponent } from "./thanks-component";
 
-export const FormSteps = ({ formStep, switchInfo, changeHandler }) => {
+export const FormSteps = ({
+  formStep,
+  switchInfo,
+  planName,
+  setPlanName,
+  priceAmount,
+  setPriceAmount,
+  addOnsData,
+  changeHandler,
+  changeHandlerCheckbox,
+}) => {
   return (
     <div className="form-step-one">
       <div className="bg-form-one">
@@ -16,10 +26,26 @@ export const FormSteps = ({ formStep, switchInfo, changeHandler }) => {
       <div className="form-step-div">
         {formStep === 0 && <StepOne />}
         {formStep === 1 && (
-          <StepTwo switchInfo={switchInfo} changeHandler={changeHandler} />
+          <StepTwo
+            switchInfo={switchInfo}
+            setPlanName={setPlanName}
+            setPriceAmount={setPriceAmount}
+            changeHandler={changeHandler}
+          />
         )}
-        {formStep === 2 && <StepThree switchInfo={switchInfo} />}
-        {formStep === 3 && <StepFour />}
+        {formStep === 2 && (
+          <StepThree
+            switchInfo={switchInfo}
+            changeHandlerCheckbox={changeHandlerCheckbox}
+          />
+        )}
+        {formStep === 3 && (
+          <StepFour
+            addOnsData={addOnsData}
+            planName={planName}
+            priceAmount={priceAmount}
+          />
+        )}
         {formStep === 4 && <ThanksComponent />}
       </div>
     </div>
