@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export const StepOne = ({
   formValues,
@@ -9,6 +9,7 @@ export const StepOne = ({
   setSubmitted,
   submitHandlerStepOne,
 }) => {
+  //eslint-disable-next-line
   const userInput = {
     name: "",
     email: "",
