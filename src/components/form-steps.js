@@ -6,6 +6,12 @@ import { ThanksComponent } from "./thanks-component";
 
 export const FormSteps = ({
   formStep,
+  formValues,
+  setFormValues,
+  formErrors,
+  setFormErrors,
+  submitted,
+  setSubmitted,
   switchInfo,
   planName,
   setPlanName,
@@ -14,6 +20,7 @@ export const FormSteps = ({
   addOnsData,
   changeHandler,
   changeHandlerCheckbox,
+  submitHandlerStepOne,
 }) => {
   return (
     <div className="form-step-one">
@@ -24,7 +31,17 @@ export const FormSteps = ({
         <button className={`${formStep === 3 ? "four" : "btn"}`}>4</button>
       </div>
       <div className="form-step-div">
-        {formStep === 0 && <StepOne />}
+        {formStep === 0 && (
+          <StepOne
+            formValues={formValues}
+            setFormValues={setFormValues}
+            formErrors={formErrors}
+            setFormErrors={setFormErrors}
+            submitted={submitted}
+            setSubmitted={setSubmitted}
+            submitHandlerStepOne={submitHandlerStepOne}
+          />
+        )}
         {formStep === 1 && (
           <StepTwo
             switchInfo={switchInfo}

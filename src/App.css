@@ -139,6 +139,14 @@ img {
   font-family: "Ubuntu-Regular";
   color: rgb(155, 156, 160);
 }
+.error {
+  color: red;
+  font-family: "Ubuntu-Regular";
+  font-size: .8rem;
+  position: relative;
+  top:15%;
+  left: 57%;
+}
 
 /* StepTwo */
 .step-two-map-button {
@@ -316,6 +324,15 @@ img {
   font-family: "Ubuntu-Regular";
   margin-right: 2em;
   padding: 1em;
+}
+.confirm {
+  background-color: rgb(72, 62, 255);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: "Ubuntu-Regular";
+  margin-right: 2em;
+  padding: 1.1em 1.6em;
 }
 
 /* ThanksComponent */
