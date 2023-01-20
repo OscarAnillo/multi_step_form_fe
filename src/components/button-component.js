@@ -1,4 +1,11 @@
-export const ButtonComponent = ({ formStep, clickBackStep, clickNextStep }) => {
+export const ButtonComponent = ({
+  formStep,
+  formErrors,
+  submitted,
+  clickBackStep,
+  clickNextStep,
+}) => {
+  console.log(submitted);
   return (
     <>
       {formStep === 4 ? null : (
@@ -11,9 +18,20 @@ export const ButtonComponent = ({ formStep, clickBackStep, clickNextStep }) => {
             )}
           </div>
           <div>
-            <button onClick={clickNextStep} className="next">
-              Next Step
-            </button>
+            {formStep === 3 ? (
+              <button onClick={clickNextStep} className="confirm">
+                Confirm
+              </button>
+            ) : (
+              <button
+                type="submit"
+                onClick={clickNextStep}
+                className="next"
+                //disabled={Object.values(formErrors).length}
+              >
+                Next Step
+              </button>
+            )}
           </div>
         </div>
       )}
