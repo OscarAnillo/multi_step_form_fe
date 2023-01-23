@@ -22,7 +22,6 @@ export const ButtonComponent = ({
               </button>
             ) : (
               <button
-                type="submit"
                 onClick={clickNextStep}
                 className="next"
                 disabled={formStep === 1 && planName === " "}

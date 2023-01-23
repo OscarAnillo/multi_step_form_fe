@@ -743,6 +743,9 @@ img {
 
   margin-left: 2em;
 }
+.back:hover {
+  cursor: pointer;
+}
 .next {
   background-color: rgb(7, 46, 101);
   border: none;
@@ -752,6 +755,9 @@ img {
   margin-right: 2em;
   padding: 1em;
 }
+.next:hover {
+  cursor: pointer;
+}
 .confirm {
   background-color: rgb(72, 62, 255);
   border: none;
@@ -760,6 +766,9 @@ img {
   font-family: "Ubuntu-Regular";
   margin-right: 2em;
   padding: 1.1em 1.6em;
+}
+.confirm:hover {
+  cursor: pointer;
 }
 
 /* ThanksComponent */
