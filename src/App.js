@@ -12,9 +12,10 @@ function App() {
   const [formErrors, setFormErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [switchInfo, setSwitchInfo] = useState(true);
-  const [planName, setPlanName] = useState("");
+  const [planName, setPlanName] = useState(" ");
   const [priceAmount, setPriceAmount] = useState("");
   const [addOnsData, setAddOnsData] = useState([]);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
   const changeHandlerCheckbox = (e) => {
     const { name, value } = e.target;
@@ -35,7 +36,9 @@ function App() {
     }
 
     if (!values.email) {
-      errors.email = "Please provide an Email";
+      errors.email = "Please provide an email";
+    } else if (!emailRegex.test(values.email)) {
+      errors.email = "Enter a valid email";
     }
     if (!values.phoneNumber) {
       errors.phoneNumber = "Please provide a number";
@@ -62,7 +65,6 @@ function App() {
   const submitHandlerStepOne = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    console.log("Hello");
   };
 
   return (
@@ -91,6 +93,7 @@ function App() {
         formStep={formStep}
         formErrors={formErrors}
         submitted={submitted}
+        planName={planName}
         clickBackStep={clickBackStep}
         clickNextStep={clickNextStep}
         submitHandlerStepOne={submitHandlerStepOne}

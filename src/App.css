@@ -21,6 +21,7 @@
   background-color: rgb(238, 245, 255);
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .container {
   width: 100%;

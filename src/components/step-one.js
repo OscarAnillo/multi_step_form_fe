@@ -6,7 +6,6 @@ export const StepOne = ({
   formErrors,
   setFormErrors,
   submitted,
-  setSubmitted,
   submitHandlerStepOne,
 }) => {
   //eslint-disable-next-line
@@ -15,8 +14,6 @@ export const StepOne = ({
     email: "",
     phoneNumber: "",
   };
-  //  const [formValues, setFormValues] = useState(userInput);
-  // const [formErrors, setFormErrors] = useState({});
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -26,11 +23,10 @@ export const StepOne = ({
 
   useEffect(() => {
     if (Object.keys(formValues).length !== 0 && submitted) {
-      console.log("submit");
+      console.log("");
     }
   }, [formValues, submitted, setFormErrors]);
 
-  console.log(formErrors);
   return (
     <form onSubmit={submitHandlerStepOne} className="form-step-one">
       <h1 className="step-title">Personal Info</h1>

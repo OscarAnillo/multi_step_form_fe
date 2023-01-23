@@ -1,11 +1,9 @@
 export const ButtonComponent = ({
   formStep,
-  formErrors,
-  submitted,
+  planName,
   clickBackStep,
   clickNextStep,
 }) => {
-  console.log(submitted);
   return (
     <>
       {formStep === 4 ? null : (
@@ -27,7 +25,7 @@ export const ButtonComponent = ({
                 type="submit"
                 onClick={clickNextStep}
                 className="next"
-                //disabled={Object.values(formErrors).length}
+                disabled={formStep === 1 && planName === " "}
               >
                 Next Step
               </button>
